@@ -6,8 +6,14 @@ import {
   Page,
   Stack
 } from '@shopify/polaris'
+import { useCallback } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export const Notifications = () => {
+  const navigate = useNavigate()
+  const linkToID = useCallback(
+    (id) => () => navigate(`/notifications/email/${id}`)
+  )
   return (
     <Page title="Notifications">
       <Layout>
@@ -20,7 +26,9 @@ export const Notifications = () => {
               </p>
               <Stack distribution="trailing">
                 <ButtonGroup>
-                  <Button plain>Edit</Button>
+                  <Button plain onClick={linkToID(123)}>
+                    Edit
+                  </Button>
                   <Button>Disabled</Button>
                 </ButtonGroup>
               </Stack>
@@ -31,7 +39,9 @@ export const Notifications = () => {
               <p>Sent to the customers who referred others to purchase</p>
               <Stack distribution="trailing">
                 <ButtonGroup>
-                  <Button plain>Edit</Button>
+                  <Button plain onClick={linkToID(123)}>
+                    Edit
+                  </Button>
                   <Button primary>Activate</Button>
                 </ButtonGroup>
               </Stack>

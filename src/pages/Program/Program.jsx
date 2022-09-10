@@ -8,14 +8,18 @@ import {
 } from '@shopify/polaris'
 import { useToggle } from 'ahooks'
 import { useCallback, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export const Program = () => {
+  const navigate = useNavigate()
+  const linkToID = useCallback((id) => () => navigate(`/program/rewards/${id}`))
+
   const [active, { toggle }] = useToggle()
   const [statusLoading, setStatusLoading] = useState(false)
   const contentStatus = active ? 'Deactivate' : 'Activate'
   const textStatus = active ? 'activated' : 'deactivated'
 
-  const [rewardDelay, setRewardDelay] = useState('')
+  const [rewardDelay, setRewardDelay] = useState('1')
   const [purchases, setPurchases] = useState('1')
 
   const handleSwitch = useCallback(async () => {
@@ -53,13 +57,13 @@ export const Program = () => {
           <Card title="Rewards for advocates">
             <Card.Section
               title={<TextStyle>15% discount</TextStyle>}
-              actions={[{ content: 'Edit' }]}
+              actions={[{ content: 'Edit', onAction: linkToID(123) }]}
             />
           </Card>
           <Card title="Rewards for referred friends">
             <Card.Section
               title={<TextStyle>15% discount</TextStyle>}
-              actions={[{ content: 'Edit' }]}
+              actions={[{ content: 'Edit', onAction: linkToID(456) }]}
             />
           </Card>
         </Layout.AnnotatedSection>

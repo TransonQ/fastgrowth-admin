@@ -19,31 +19,25 @@ export const LeftBar = () => {
       label: 'Home',
       icon: CustomersMajor,
       exactMatch: true,
-      //   subNavigationItems: [
-      //     {
-      //       url: ur.partners,
-      //       label: 'All partners',
-      //       // exactMatch: true, // 不加所有子路由都会让改标签处于选中状态
-      //     },
-      //     {
-      //       url: '/collections',
-      //       label: 'Collections',
-      //       exactMatch: true,
-      //     },
-      //   ],
     },
     {
       url: '/program',
       label: 'Program',
       icon: ProductsMajor,
-      exactMatch: true,
-      // badge: '15',
+      // exactMatch: true,
+      // subNavigationItems: [
+      //   {
+      //     url: '',
+      //     label: 'All partners',
+      //     // exactMatch: true, // 不加所有子路由都会让改标签处于选中状态
+      //   },
+      // ],
     },
     {
       url: '/notifications',
       label: 'Notifications',
       icon: AnalyticsMajor,
-      exactMatch: true,
+      // exactMatch: true,
       // badge: '15',
     },
   ]

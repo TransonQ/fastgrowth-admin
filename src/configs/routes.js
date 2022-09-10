@@ -1,5 +1,7 @@
 import { Home } from '@/pages/Home/Home'
+import { EditEmail } from '@/pages/Notifications/EditEmail/EditEmail'
 import { Notifications } from '@/pages/Notifications/Notifications'
+import { EditRewards } from '@/pages/Program/EditRewards/EditRewards'
 import { Program } from '@/pages/Program/Program'
 import { Settings } from '@/pages/Settings/Settings'
 
@@ -16,8 +18,18 @@ export const routes = [
     children: [],
   },
   {
+    path: '/program/rewards/:id',
+    element: <EditRewards />,
+    children: [],
+  },
+  {
     path: '/notifications',
     element: <Notifications />,
+    children: [],
+  },
+  {
+    path: '/notifications/email/:id',
+    element: <EditEmail />,
     children: [],
   },
   {
