@@ -17,6 +17,14 @@ module.exports = {
   plugins: ['react', 'prettier'],
   rules: {
     // 'prettier/prettier': 'error', // prettier报错
+    camelcase: 0, // 双峰驼命名格式
+    eqeqeq: 2, // 必须使用全等
+    'func-names': 1, // 函数表达式必须有名字
+    'no-var': 2, // 禁用var，用let和const代替
+    'comma-spacing': 1, // 逗号前后的空格
+    'no-implicit-coercion': 1, // 禁止隐式转换
+
+    // 其他参考:
     // 'accessor-pairs': 2, // 定义对象的set存取器属性时，强制定义get
     // // 指定数组的元素之间要以空格隔开(,后面)， never参数：[ 之前和 ] 之后不能带空格，always参数：[ 之前和 ] 之后必须带空格
     // 'array-bracket-spacing': [2, 'never'],
@@ -24,8 +32,7 @@ module.exports = {
     // 'block-scoped-var': 0,
     // // if while function 后面的{必须与if在同一行，java风格。
     // 'brace-style': [2, '1tbs', { allowSingleLine: true }],
-    // // 双峰驼命名格式
-    camelcase: 0,
+    //
     // // 数组和对象键值对最后一个逗号， never参数：不能带末尾的逗号, always参数：必须带末尾的逗号，
     // // always-multiline：多行模式必须带逗号，单行模式不能带逗号
     // 'comma-dangle': [2, 'never'],
@@ -108,7 +115,6 @@ module.exports = {
     // 'no-fallthrough': 1, // 禁止switch穿透
     // 'no-floating-decimal': 2, // 禁止省略浮点数中的0 .5 3.
     // 'no-func-assign': 2, // 禁止重复的函数声明
-    'no-implicit-coercion': 1, // 禁止隐式转换
     // 'no-implied-eval': 2, // 禁止使用隐式eval
     // 'no-inline-comments': 0, // 禁止行内备注
     // 'no-inner-declarations': [2, 'functions'], // 禁止在块语句中使用声明（变量或函数）
@@ -172,7 +178,6 @@ module.exports = {
     // 'no-use-before-define': 2, // 未定义前不能使用
     // 'no-useless-call': 2, // 禁止不必要的call和apply
     // 'no-void': 2, // 禁用void操作符
-    // 'no-var': 0, // 禁用var，用let和const代替
     // 'no-warning-comments': [
     //   1,
     //   { terms: ['todo', 'fixme', 'xxx'], location: 'start' },
@@ -185,9 +190,7 @@ module.exports = {
     // 'block-scoped-var': 0, // 块语句中使用var
     // 'brace-style': [1, '1tbs'], // 大括号风格
     // 'callback-return': 1, // 避免多次调用回调什么的
-    // camelcase: 2, // 强制驼峰法命名
     // 'comma-dangle': [2, 'never'], // 对象字面量项尾不能有逗号
-    // 'comma-spacing': 0, // 逗号前后的空格
     // 'comma-style': [2, 'last'], // 逗号风格，换行时在行首还是行尾
     // complexity: [0, 11], // 循环复杂度
     // 'computed-property-spacing': [0, 'never'], // 是否允许计算后的键名什么的
@@ -199,8 +202,7 @@ module.exports = {
     // 'dot-location': 0, // 对象访问符的位置，换行的时候在行首还是行尾
     // 'dot-notation': [0, { allowKeywords: true }], // 避免不必要的方括号
     // 'eol-last': 0, // 文件以单一的换行符结束
-    // eqeqeq: 2, // 必须使用全等
-    // 'func-names': 0, // 函数表达式必须有名字
+
     // 'func-style': [0, 'declaration'], // 函数风格，规定只能使用函数声明/函数表达式
     // 'generator-star-spacing': 0, // 生成器函数*的前后空格
     // 'guard-for-in': 0, // for in循环要用if语句过滤

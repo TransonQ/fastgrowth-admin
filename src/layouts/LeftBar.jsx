@@ -12,7 +12,7 @@ import { useLocation } from 'react-router-dom'
 export const LeftBar = () => {
   const { pathname } = useLocation()
 
-  // 左边主菜单 
+  // 左边主菜单
   const left_menu = [
     {
       url: '/',
@@ -47,7 +47,7 @@ export const LeftBar = () => {
       // badge: '15',
     },
   ]
-  // 左边下方菜单 
+  // 左边下方菜单
   const bottom_menu = [
     {
       url: '/support',
