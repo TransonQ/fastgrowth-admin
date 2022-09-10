@@ -1,11 +1,10 @@
 import { AppProvider } from '@shopify/polaris'
-import "@shopify/polaris/build/esm/styles.css"
+import '@shopify/polaris/build/esm/styles.css'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import { RecoilRoot } from 'recoil'
 import './App.css'
 import Main from './layouts/Main'
 import { Redirect } from './pages/Redirect/Redirect'
-
 
 function App() {
   return (
@@ -16,7 +15,7 @@ function App() {
           // colorScheme='dark'
         >
           <Routes>
-            <Route path="/login" element={<Redirect />} />
+            <Route path="/redirect" element={<Redirect />} />
             <Route path="/*" element={<Main />} />
           </Routes>
         </AppProvider>
