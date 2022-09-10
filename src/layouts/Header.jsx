@@ -2,6 +2,7 @@ import { TopBar } from '@shopify/polaris'
 import { CircleRightMajor, ProfileMajor } from '@shopify/polaris-icons'
 import { useCallback, useState } from 'react'
 import logo from '../assets/img/logo.svg'
+
 export const Header = () => {
   const [userMenuActive, setUserMenuActive] = useState(false)
   const toggleUserMenuActive = useCallback(
@@ -20,7 +21,6 @@ export const Header = () => {
   ]
 
   return (
-    // <CustomProperties colorScheme='dark'>
     <TopBar
       showNavigationToggle
       userMenu={
@@ -40,6 +40,5 @@ export const Header = () => {
       // onSearchResultsDismiss={handleSearchResultsDismiss}
       // onNavigationToggle={toggleMobileNavigationActive}
     />
-    // </CustomProperties>
   )
 }
