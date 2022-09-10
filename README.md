@@ -1,5 +1,11 @@
 # FastGrowth Admin
 
+技术栈:
+
+- [react 18](https://beta.reactjs.org/)
+- [recoil](https://recoiljs.org/zh-hans/)
+- [react-router-dom v6](https://reactrouter.com/en/v6.3.0)
+
 # Commits 规范说明：
 
 - [Commits MUST be prefixed with a type:](https://www.conventionalcommits.org/en/v1.0.0-beta.2/#specification)
@@ -14,7 +20,3 @@
   - ci：自动化流程配置或脚本修改
   - chore：非 src 和 test 的修改，发布版本等
   - revert：恢复先前的提交
-
-> 参考
->
-> - [前端工程化配置指南](https://juejin.cn/post/6971812117993226248)
