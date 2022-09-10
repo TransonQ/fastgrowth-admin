@@ -98,7 +98,7 @@ export const Home = () => {
                 { title: 'Advocate' },
                 { title: 'Friend' },
                 { title: 'Status' },
-                { title: 'Status', hidden: false },
+                { title: 'Order ID', hidden: false },
                 { title: 'Date', hidden: false },
               ]}
               selectable={false}
