@@ -1,24 +1,13 @@
 import { TopBar } from '@shopify/polaris'
 import { CircleRightMajor, ProfileMajor } from '@shopify/polaris-icons'
-import { useCallback, useMemo, useState } from 'react'
-
+import { useCallback, useState } from 'react'
+import logo from '../assets/img/logo.svg'
 export const Header = () => {
   const [userMenuActive, setUserMenuActive] = useState(false)
   const toggleUserMenuActive = useCallback(
     () => setUserMenuActive((userMenuActive) => !userMenuActive),
     []
   )
-  // eslint-disable-next-line
-  const [avatarSrc, setAvatarSrc] = useState(
-    'https://burst.shopifycdn.com/photos/business-woman-smiling-in-office.jpg?width=1850'
-  )
-  // eslint-disable-next-line
-  const [username, setUsername] = useState('Transon')
-
-  const usernameShortCut = useMemo(() => {
-    if (!username?.length) return ''
-    return username.slice(0, 2)
-  }, [username])
 
   // header avatar menu actions
   const userMenuActions = [
@@ -37,10 +26,10 @@ export const Header = () => {
       userMenu={
         <TopBar.UserMenu
           actions={userMenuActions}
-          name={username}
-          avatar={avatarSrc}
+          name={'Fastlane'}
+          avatar={logo}
           // detail={storeName}
-          initials={usernameShortCut}
+          initials={'Fastlane'}
           open={userMenuActive}
           onToggle={toggleUserMenuActive}
         />

@@ -1,10 +1,8 @@
-// eslint-disable-next-line
-import Cookies from "js-cookie"; //
-import axios from "axios";
+import axios from 'axios'
 
-const { REACT_APP_API_ORIGIN } = process.env;
+const { REACT_APP_API_ORIGIN } = process.env
 
-let BASE_URL = REACT_APP_API_ORIGIN;
+const BASE_URL = REACT_APP_API_ORIGIN
 
 /* you can also do this without env variables:
 
@@ -22,38 +20,38 @@ const ax = axios.create({
   // 选项包括: 'arraybuffer', 'document', 'json', 'text', 'stream'
   // 浏览器专属：'blob'
   // responseType: "json", // 默认值
-});
+})
 
 // request
 
 ax.interceptors.request.use(
   (config) => {
-    if (config.method === "post") {
+    if (config.method === 'post') {
       if (config?.data?.isFormData) {
-        config.headers.post["Content-Type"] = "multipart/form-data";
-        config.data = config.data.formData;
+        config.headers.post['Content-Type'] = 'multipart/form-data'
+        config.data = config.data.formData
       }
     }
 
-    return config;
+    return config
   },
   (error) => {
-    return Promise.reject(error);
+    return Promise.reject(error)
   }
-);
+)
 
 // response
 
 ax.interceptors.response.use(
   (response) => {
-    return response;
+    return response
   },
   (error) => {
-    return Promise.reject(error);
+    return Promise.reject(error)
   }
-);
+)
 
-export { ax };
+export { ax }
 
 /*
 axios# get(    url         [, config]  )
